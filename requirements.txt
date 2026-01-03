@@ -18,3 +18,7 @@ rich>=13.0.0  # Optional: for pretty console output
 fastapi>=0.109.0
 uvicorn[standard]>=0.27.0
 python-multipart>=0.0.6
+
+# Testing
+pytest>=8.0.0
+httpx>=0.26.0  # Required for FastAPI TestClient

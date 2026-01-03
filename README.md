@@ -14,15 +14,32 @@ An AI-powered resume optimization tool that analyzes job descriptions and tailor
 
 ## Quick Start
 
+### Web Interface (Recommended)
+
 ```bash
 # Clone the repo
 git clone https://github.com/YOUR_USERNAME/resume-tailor.git
 cd resume-tailor
 
 # Install dependencies
-npm install
 pip install -r requirements.txt
+cd frontend && npm install && cd ..
 
+# Set your API key
+export ANTHROPIC_API_KEY=your_key_here
+
+# Start the backend (Terminal 1)
+python api.py
+
+# Start the frontend (Terminal 2)
+cd frontend && npm run dev
+```
+
+Then open **http://localhost:5173** in your browser.
+
+### CLI Usage
+
+```bash
 # Set your API key
 export ANTHROPIC_API_KEY=your_key_here
 
@@ -37,12 +54,27 @@ python main.py --resume your_master_resume.md --job job_description.txt
 ```
 resume-tailor/
 ├── main.py                 # CLI entry point
+├── api.py                  # FastAPI backend for web interface
 ├── config.py               # Configuration and API settings
 ├── requirements.txt        # Python dependencies
 ├── package.json            # Node dependencies (for docx generation)
 │
+├── frontend/               # React web interface
+│   ├── src/
+│   │   ├── App.tsx         # Main application component
+│   │   ├── api.ts          # API client functions
+│   │   ├── types.ts        # TypeScript type definitions
+│   │   ├── components/
+│   │   │   ├── TailorForm.tsx      # Resume/job input form
+│   │   │   ├── ProcessingView.tsx  # Progress display
+│   │   │   └── ResultsView.tsx     # Results and download
+│   │   └── hooks/
+│   │       └── useTailoring.ts     # Tailoring state management
+│   ├── package.json        # Frontend dependencies
+│   └── vite.config.ts      # Vite configuration
+│
 ├── core/
-│   ├── __init__.py
+│   ├── __init__.py         # Data models (ParsedResume, ParsedJD, etc.)
 │   ├── jd_parser.py        # Job description extraction
 │   ├── resume_analyzer.py  # Master resume parsing
 │   ├── matcher.py          # Experience-to-requirements matching
@@ -50,26 +82,14 @@ resume-tailor/
 │   └── scorer.py           # Fit scoring and gap analysis
 │
 ├── output/
-│   ├── __init__.py
 │   ├── docx_generator.js   # Word document creation
 │   └── report_generator.py # Match report generation
 │
 ├── utils/
-│   ├── __init__.py
 │   ├── web_fetcher.py      # URL content extraction
 │   └── text_utils.py       # Text processing helpers
 │
-├── prompts/
-│   ├── jd_extraction.txt   # Prompt for parsing JDs
-│   ├── matching.txt        # Prompt for experience matching
-│   ├── rewriting.txt       # Prompt for bullet optimization
-│   └── scoring.txt         # Prompt for fit analysis
-│
-├── templates/
-│   └── resume_template.js  # Base resume structure
-│
 └── examples/
-    ├── master_resume.md    # Example master resume
     └── sample_jd.txt       # Example job description
 ```
 

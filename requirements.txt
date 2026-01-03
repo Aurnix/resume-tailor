@@ -13,3 +13,8 @@ pydantic>=2.5.0
 # CLI
 click>=8.1.0  # Optional: for enhanced CLI
 rich>=13.0.0  # Optional: for pretty console output
+
+# Web API
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6

@@ -1,0 +1,49 @@
+# Example Job Description
+
+**Senior Marketing Operations Manager**
+Acme Corp - San Francisco, CA (Remote OK)
+
+## About the Role
+
+We're looking for a Senior Marketing Operations Manager to own our marketing technology stack and drive operational excellence across our growth team.
+
+## Responsibilities
+
+- Own and optimize our marketing technology stack (HubSpot, Salesforce, etc.)
+- Build and maintain automated workflows and integrations
+- Develop dashboards and reporting for marketing performance
+- Partner with demand gen, content, and product marketing teams
+- Manage vendor relationships and tool evaluations
+- Drive process improvements and documentation
+
+## Requirements
+
+- 5+ years in marketing operations or similar role
+- Expert-level proficiency with marketing automation platforms
+- Strong SQL and data analysis skills
+- Experience with Salesforce administration
+- Proven track record of building scalable processes
+- Excellent cross-functional communication skills
+
+## Preferred
+
+- Experience with Python or JavaScript for automation
+- Familiarity with BI tools (Looker, Tableau, etc.)
+- Background in B2B SaaS
+- Experience managing a team or leading projects
+
+## Benefits
+
+- Competitive salary ($130K-$160K)
+- Equity package
+- Unlimited PTO
+- Remote-first culture
+- Health, dental, vision
+- 401k match
+
+---
+
+To use this example:
+```bash
+python main.py -r examples/master_resume.md -j examples/sample_jd.txt
+```

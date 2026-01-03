@@ -1,0 +1,21 @@
+{
+  "name": "resume-tailor",
+  "version": "1.0.0",
+  "description": "AI-powered resume optimization for job applications",
+  "main": "output/docx_generator.js",
+  "scripts": {
+    "generate-docx": "node output/docx_generator.js"
+  },
+  "keywords": [
+    "resume",
+    "job-search",
+    "ai",
+    "ats",
+    "career"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "docx": "^8.5.0"
+  }
+}
